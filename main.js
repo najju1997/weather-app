@@ -15,8 +15,13 @@ search_btn.addEventListener('click', getWeather); // Add event listener to the s
 
 async function getWeather() {
     try {
-        const error_p = document.querySelector('#error-text')
+        const error_p = document.querySelector('#error-text');
         const location = document.querySelector(".search-input").value;
+        const loadingIcon = document.querySelector('.loading-icon');
+
+        // Show loading icon
+        loadingIcon.style.display = 'block';
+
         const query = await fetch(`http://api.weatherapi.com/v1/current.json?key=a8e69f6b830e4ae7b4624052242304&q=${location}`);
 
         const info = await query.json();
@@ -24,22 +29,24 @@ async function getWeather() {
         if (error_p) {
             info_container_div.removeChild(error_p);
         }
-        
 
         fillUp(info);
 
-
-
     } catch (error) {
-        const error_div = document.createElement('p')
-        error_div.id = "error-text"
+        const error_div = document.createElement('p');
+        error_div.id = "error-text";
         error_div.textContent = "Invalid City"; // Display the error message
         info_container_div.appendChild(error_div);
-    }
+    } finally {
+        // Hide loading icon
+        const loadingIcon = document.querySelector('.loading-icon');
+        loadingIcon.style.display = 'none';
 
-    // Clear the search field
-    locationInput.value = '';
+        // Clear the search field
+        locationInput.value = '';
+    }
 }
+
 
 // Fill data in div after getting the JSON from API
 function fillUp(info) {

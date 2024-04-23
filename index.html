@@ -24,6 +24,35 @@
             </form>        
         </div>
         <div class="info-container">
+            <div class="loading-icon" style="display: none;">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="xMidYMid"
+                >
+                  <circle
+                    cx="50"
+                    cy="50"
+                    fill="none"
+                    stroke="#007bff"
+                    stroke-width="8"
+                    r="35"
+                    stroke-dasharray="164.93361431346415 56.97787143782138"
+                  >
+                    <animateTransform
+                      attributeName="transform"
+                      type="rotate"
+                      repeatCount="indefinite"
+                      dur="1s"
+                      values="0 50 50;360 50 50"
+                      keyTimes="0;1"
+                    ></animateTransform>
+                  </circle>
+                </svg>
+              </div> 
+              
             <div id="location-info"></div>
             <div id="time-info"></div>
             <div class="weather-info-container">
