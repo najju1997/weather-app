@@ -1,0 +1,161 @@
+/* Import Nunito font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+/* General styling */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #178bad;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.nav-container {
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+#title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    width: 70%;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2ecc71;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.search-button:hover {
+    background-color: #27ae60;
+}
+
+.search-button svg {
+    margin-right: 5px;
+}
+
+.info-container {
+    padding: 30px;
+}
+
+.weather-info-container {
+    display: flex;
+    margin: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#location-info {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#time-info {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+#temp-info {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#condition-info,
+#feels-info {
+    font-size: 28px;
+}
+
+/* Error message styling */
+#error-text {
+    color: red;
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Credits styling */
+.footer {
+    font-family: 'Nunito', sans-serif;
+    background-color: #178bad;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.credits {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.credits a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credits a:hover {
+    color: #27ae60;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 20px;
+    }
+
+    #title {
+        font-size: 24px;
+    }
+
+    .search-input,
+    .search-button {
+        padding: 12px;
+    }
+
+    #temp-info {
+        font-size: 36px;
+    }
+
+    #condition-info,
+    #feels-info {
+        font-size: 24px;
+    }
+}

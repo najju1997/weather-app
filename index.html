@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="content">
+        <div class="nav-container">
+            <div id="title">Simple Weather App</div>
+            <form class="search" action="#" method="get">
+                <input class="search-input" type="search" name="" id="" placeholder="Search location" autocomplete="off">
+                <button class="search-button" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>        
+        </div>
+        <div class="info-container">
+            <div id="location-info"></div>
+            <div id="time-info"></div>
+            <div class="weather-info-container">
+                <div id="temp-info"></div>
+                <div id="condition-info"></div>
+                <div id="feels-info"></div>
+                
+            </div>
+        </div>
+    </div>
+
+    <p class="credits">Built by <a href="https://github.com/najju1997/" target="_blank">Uzzan</a> | <a href="https://github.com/najju1997/weather-app/" target="_blank">Source code</a></p>
+
+    <script src="main.js"></script>
+</body>
+</html>
